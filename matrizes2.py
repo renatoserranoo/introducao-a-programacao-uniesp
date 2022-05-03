@@ -1,21 +1,30 @@
 import linecache
 
-import numpy
 import random
 
 matriz = []
 
 for x in range(1, 11):
+
     lista_auxiliar = []
-    for y in range(1, 11):
-        lista_auxiliar.append(random.randint(1, 100))
-    print('adicionando na matriz')
-    print(lista_auxiliar)
+
+    for j in range(10):
+        lista_auxiliar.append(random.randint(0, 100))
+
     matriz.append(lista_auxiliar)
 
-soma = numpy.sum(matriz)
-print('soma da matriz')
-print(soma)
+for linha in matriz:
+    print(linha)
+
+resultado_soma = 0
+
+for l in matriz:
+
+    for c in l:
+
+        resultado_soma += c
+
+print(f'Resultado da Soma = {resultado_soma}')
 
 matrizb = []
 
